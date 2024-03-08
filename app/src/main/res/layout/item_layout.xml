@@ -13,7 +13,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- All views inside the CardView enclosed within a single RelativeLayout -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -74,7 +73,6 @@
 
             </LinearLayout>
 
-            <!-- Constraint to align the btn_add_quantity ImageView to the right of secondLinearLayout with a margin of 10dp -->
             <ImageView
                 android:id="@+id/btn_add_quantity"
                 android:layout_width="30dp"
@@ -84,9 +82,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"/>
-
         </RelativeLayout>
-
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
