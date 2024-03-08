@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/app_bar_layout_background">
+
+        <ImageView
+            android:id="@+id/btn_menu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/menu_icon"
+            android:contentDescription="menu button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My store"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="40dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/favourite_icon"
+            android:layout_marginStart="170dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/shopping_cart_icon"
+            android:layout_marginStart="20dp"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/category_recyclerview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/category_layout"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="160dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- All views inside the CardView enclosed within a single RelativeLayout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/itemIcon"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/iv_favourite"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@id/itemIcon"
+                android:layout_alignEnd="@id/itemIcon"
+                android:src="@drawable/favourite_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="90dp">
+
+                <TextView
+                    android:id="@+id/itemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carrot"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="110dp"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/itemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹40"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/kg"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Constraint to align the btn_add_quantity ImageView to the right of secondLinearLayout with a margin of 10dp -->
+            <ImageView
+                android:id="@+id/btn_add_quantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/add_item_icon"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
